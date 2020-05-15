@@ -1,8 +1,9 @@
-FROM ruby:2.4.1
+FROM ruby:2.6.5
 
-RUN git clone https://github.com/guppy0356/echo.git
-WORKDIR echo
+RUN mkdir /app
+COPY echo.rb /app
+
+WORKDIR /app
 
 EXPOSE 8000
 CMD ["ruby", "echo.rb"]
-
