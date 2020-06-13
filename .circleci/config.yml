@@ -28,7 +28,7 @@ jobs:
     steps: 
       - checkout
       - attach_workspace:
-          at: vendor/bundle
+          at: ./
       - run:
           name: RSpec
           command: |
