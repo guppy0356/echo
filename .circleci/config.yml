@@ -29,6 +29,8 @@ jobs:
   test:
     docker:
       - image: circleci/ruby:2.6.5
+      environment:
+        BUNDLE_PATH: vendor/bundle
     steps: 
       - checkout
       - attach_workspace:
